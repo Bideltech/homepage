@@ -1,0 +1,750 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BidelTech | Future of Learning</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#87CEEB',  // Sky blue
+                        secondary: '#FF0000', // Red
+                        darkblue: '#1E3A8A',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom CSS for elements that need extra styling */
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(135, 206, 235, 0.9) 0%, rgba(255, 0, 0, 0.9) 100%);
+        }
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .nav-link:hover {
+            color: #FF0000 !important;
+        }
+        .enroll-btn:hover {
+            background-color: #1E3A8A !important;
+        }
+        .logo img{
+            width: 50px;
+        }
+        .downlogo img{
+            width: 60px;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="logo flex-shrink-0 flex items-center">
+                        <!-- <i class="fas fa-laptop-code text-secondary text-3xl mr-2"></i> -->
+                        <img class="" src="images/bidel.jpg" alt="">
+                        <span class="text-xl font-bold text-darkblue">BidelTech</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#home" class="nav-link text-gray-900 hover:text-secondary px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                    <a href="#courses" class="nav-link text-gray-900 hover:text-secondary px-3 py-2 rounded-md text-sm font-medium">Courses</a>
+                    <a href="#about" class="nav-link text-gray-900 hover:text-secondary px-3 py-2 rounded-md text-sm font-medium">About</a>
+                    <a href="#instructors" class="nav-link text-gray-900 hover:text-secondary px-3 py-2 rounded-md text-sm font-medium">Instructors</a>
+                    <a href="#contact" class="nav-link text-gray-900 hover:text-secondary px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    <a href="#enroll" class="enroll-btn bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">Enroll Now</a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-red-500 hover:bg-gray-100 focus:outline-none">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-secondary">Home</a>
+                <a href="#courses" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-secondary">Courses</a>
+                <a href="#about" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-secondary">About</a>
+                <a href="#instructors" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-secondary">Instructors</a>
+                <a href="#contact" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-secondary">Contact</a>
+                <a href="#enroll" class="enroll-btn block w-full text-center bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-md text-base font-medium mt-2">Enroll Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient pt-24 pb-20 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Launch Your Tech Career with Our Coding Programs</h1>
+                    <p class="text-lg mb-8">Designed for university students and adult learners all around the world. Gain in-demand skills from industry experts with our practical, project-based curriculum.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#courses" class="bg-secondary hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg text-center transition duration-300">Explore Courses</a>
+                        <a href="#contact" class="bg-white hover:bg-gray-100 text-darkblue font-bold py-3 px-6 rounded-lg text-center transition duration-300">Contact Us</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Students learning to code" class="rounded-lg shadow-xl h-auto max-h-96">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-6 rounded-lg border border-gray-200 shadow-sm">
+                    <div class="text-primary text-4xl font-bold mb-2">95%</div>
+                    <h3 class="text-lg font-semibold text-gray-900">Graduation Rate</h3>
+                    <p class="text-gray-600">Students who complete our programs</p>
+                </div>
+                <div class="p-6 rounded-lg border border-gray-200 shadow-sm">
+                    <div class="text-secondary text-4xl font-bold mb-2">    1,000+</div>
+                    <h3 class="text-lg font-semibold text-gray-900">Students Trained</h3>
+                    <p class="text-gray-600">Since our founding in 2020</p>
+                </div>
+                <div class="p-6 rounded-lg border border-gray-200 shadow-sm">
+                    <div class="text-primary text-4xl font-bold mb-2">80%</div>
+                    <h3 class="text-lg font-semibold text-gray-900">Career Advancement</h3>
+                    <p class="text-gray-600">Report salary increases or new jobs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Popular Coding Courses</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Choose from our comprehensive curriculum designed for all skill levels.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Course 1 -->
+                <div class="course-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 bg-primary flex items-center justify-center">
+                        <i class="fab fa-js-square text-white text-7xl"></i>
+                    </div>
+                    <div classp-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-900">Full-Stack Web dev</h3>
+                            <span class="bg-red-100 text-secondary text-xs font-semibold px-3 py-1 rounded-full">BESTSELLER</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Master React, Node.js or Django, Express, and MongoDB to build modern web applications.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <i class="fas fa-clock text-primary mr-1"></i>
+                                <span class="text-sm text-gray-600">12 Weeks</span>
+                            </div>
+                            <div class="text-primary font-bold">&#8358;300,000</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 2 -->
+                <div class="course-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 bg-secondary flex items-center justify-center">
+                        <i class="fab fa-python text-white text-7xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Python for Data Science</h3>
+                        <p class="text-gray-600 mb-4">Learn Python fundamentals, data analysis, visualization, and machine learning basics.</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <i class="fas fa-clock text-primary mr-1"></i>
+                                <span class="text-sm text-gray-600">10 Weeks</span>
+                            </div>
+                            <div class="text-primary font-bold">&#8358;250,000</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 3 -->
+                <div class="course-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 bg-primary flex items-center justify-center">
+                        <i class="fas fa-laptop text-white text-7xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Digital Marketing</h3>
+                        <p class="text-gray-600 mb-4">Learn digital marketing, content creation, graphics and video editing</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <i class="fas fa-clock text-primary mr-1"></i>
+                                <span class="text-sm text-gray-600">8 Weeks</span>
+                            </div>
+                            <div class="text-primary font-bold">&#8358;200,000</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- <div class="text-center mt-12">
+                <a href="#courses" class="inline-block bg-primary hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-lg transition duration-300 shadow-lg">
+                    View All 12 Courses
+                </a>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Learning Experience Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:flex lg:items-center lg:justify-between">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Our Unique Learning Approach</h2>
+                    <div class="space-y-6">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-primary text-white">
+                                    <i class="fas fa-project-diagram"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Project-Based Learning</h3>
+                                <p class="mt-1 text-gray-600">Build real-world applications throughout the course, creating a portfolio to showcase to employers.</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-secondary text-white">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Industry Expert Instructors</h3>
+                                <p class="mt-1 text-gray-600">Learn from professionals who are actively working in tech companies and bring real-world insights.</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-md bg-primary text-white">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Flexible Learning Options</h3>
+                                <p class="mt-1 text-gray-600">Choose from full-time, part-time, evening, or weekend classes to fit your schedule.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Upcoming Bootcamps</h3>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-secondary pl-4 py-2">
+                                <h4 class="font-semibold">Web Development</h4>
+                                <p class="text-sm text-gray-600">Starts: June 5, 2025</p>
+                                <p class="text-sm text-gray-600">Duration: 12 weeks</p>
+                            </div>
+                            <div class="border-l-4 border-primary pl-4 py-2">
+                                <h4 class="font-semibold">Data Science</h4>
+                                <p class="text-sm text-gray-600">Starts: June 12, 2025</p>
+                                <p class="text-sm text-gray-600">Duration: 10 weeks</p>
+                            </div>
+                            <div class="border-l-4 border-secondary pl-4 py-2">
+                                <h4 class="font-semibold">Mobile App Development</h4>
+                                <p class="text-sm text-gray-600">Starts: July 3, 2025</p>
+                                <p class="text-sm text-gray-600">Duration: 8 weeks</p>
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <a href="#enroll" class="inline-block w-full text-center bg-secondary hover:bg-red-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                                Apply Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-primary bg-opacity-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">Success Stories</h2>
+                <p class="text-lg text-gray-600">What our students say about us</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah J." class="w-12 h-12 rounded-full">
+                        <div class="ml-4">
+                            <h4 class="font-bold text-gray-900">Mimi Johnson</h4>
+                            <p class="text-primary text-sm">Data Analyst @ TechCorp</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"The Python course completely changed my career trajectory. Within 3 months of completing the program, I landed my first tech job with a 40% salary increase."</p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <img src="images/nat.png" alt="Michael T." class="w-12 h-12 rounded-full">
+                        <div class="ml-4">
+                            <h4 class="font-bold text-gray-900">Michael Adewale</h4>
+                            <p class="text-primary text-sm">Full-Stack Developer @ DigitalAgency</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"As a complete beginner, I was nervous about switching careers at 35. The structured curriculum and mentor support made all the difference. Now I love going to work every day!"</p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya K." class="w-12 h-12 rounded-full">
+                        <div class="ml-4">
+                            <h4 class="font-bold text-gray-900">Priya Kumar</h4>
+                            <p class="text-primary text-sm">Computer Science Student</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"Supplementing my university education with CodeMasters courses gave me the practical skills I needed. I completed a summer internship at a top tech company thanks to my portfolio projects."</p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructors Section -->
+    <section id="instructors" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">Meet Our Expert Instructors</h2>
+                <p class="text-lg text-gray-600">Learn from the best in the industry</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Instructor 1 -->
+                <div class="text-center">
+                    <img src="images/delex.png" alt="Dr. Lisa Wong" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-md border-4 border-white border-opacity-50">
+                    <h3 class="text-xl font-bold text-gray-900 mb-1">Bamidele Adedeji</h3>
+                    <p class="text-secondary text-sm mb-3">Lead Full-Stack Engineer</p>
+                    <p class="text-gray-600 text-sm">Former Google engineer specializing in Python and Javascript frameworks and cloud architecture.</p>
+                </div>
+                
+                <!-- Instructor 2 -->
+                <div class="text-center">
+                    <img src="images/ab.jpg" alt="Mark Johnson" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-md border-4 border-white border-opacity-50">
+                    <h3 class="text-xl font-bold text-gray-900 mb-1">Abiola Ajayi</h3>
+                    <p class="text-secondary text-sm mb-3">Lead Digital Marketer and Instructor</p>
+                    <p class="text-gray-600 text-sm">Former Apple employee, with 10years of experience.</p>
+                </div>
+                
+                <!-- Instructor 3 -->
+                <!-- <div class="text-center">
+                    <img src="newads/delex (1).png" alt="Ana Rodriguez" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-md border-4 border-white border-opacity-50">
+                    <h3 class="text-xl font-bold text-gray-900 mb-1">Bamidele Adedeji</h3>
+                    <p class="text-secondary text-sm mb-3">Lead Full-Stack Engineer</p>
+                    <p class="text-gray-600 text-sm">Former Google engineer specializing in Python and Javascript frameworks and cloud architecture.</p>
+                </div> -->
+                
+                <!-- Instructor 4 -->
+                <!-- <div class="text-center">
+                    <img src="newads/ab.jpg" alt="David Chen" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-md border-4 border-white border-opacity-50">
+                    <h3 class="text-xl font-bold text-gray-900 mb-1">Abiola Ajayi</h3>
+                    <p class="text-secondary text-sm mb-3">Lead Digital Marketer and Instructor</p>
+                    <p class="text-gray-600 text-sm">Lead Digital Marketer and Instructor.</p>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-primary to-secondary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready to Start Your Coding Journey?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Join thousands of students who have transformed their careers with our tech programs.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#enroll" class="bg-white hover:bg-gray-100 text-darkblue font-bold py-3 px-8 rounded-lg transition duration-300 shadow-lg">
+                    Apply Now
+                </a>
+                <a href="https://wa.link/4odpc8" class="bg-transparent hover:bg-white hover:text-darkblue border-2 border-white text-white font-bold py-3 px-8 rounded-lg transition duration-300 shadow-lg">
+                    Schedule a Call
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:flex lg:items-center lg:justify-between">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Contact Us</h2>
+                    <p class="text-lg text-gray-600 mb-8">Have questions about our programs? Reach out to our admissions team who can help guide you to the right course for your goals.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-primary bg-opacity-10 p-3 rounded-full">
+                                <i class="fas fa-map-marker-alt text-primary text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Our Campus</h3>
+                                <p class="mt-1 text-gray-600">43 Odundana Street of Allen <br>Ikeja, Lagos</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-primary bg-opacity-10 p-3 rounded-full">
+                                <i class="fas fa-phone-alt text-primary text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Call & WhatsApp</h3>
+                                <p class="mt-1 text-gray-600">(234) 812 296 0254</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-primary bg-opacity-10 p-3 rounded-full">
+                                <i class="fas fa-envelope text-primary text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Email</h3>
+                                <p class="mt-1 text-gray-600">bideltechinstitute@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="flex-shrink-0 bg-primary bg-opacity-10 p-3 rounded-full">
+                                <i class="fas fa-clock text-primary text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-medium text-gray-900">Office Hours</h3>
+                                <p class="mt-1 text-gray-600">Monday-Friday: 9am-6pm WAT<br>Saturday: 10am-2pm WAT</p>
+                                <p class="mt-1 text-gray-600">Online 247</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h3>
+                        <form 
+                        action="https://formspree.io/f/xpwrdavr"
+                        method="POST"
+                        >
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+                                <input type="email" name="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                            </div>
+                            <div class="mb-4">
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                            </div>
+                            <div class="mb-4">
+                                <label for="course" class="block text-gray-700 font-medium mb-2">Course Interested In</label>
+                                <select id="course" name="course" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                    <option value="">Select a course</option>
+                                    <option value="fullstack">Full-Stack </option>
+                                    <option value="python">Python for Data Science</option>
+                                    <option value="java">Digital Marketing</option>
+                                    <option value="mobile">UI/UX</option>
+                                <option value="devops">Graphic Design</option>
+                                </select>
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
+                                <textarea id="message" name="message" narows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-secondary hover:bg-red-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                                Submit Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-2">Frequently Asked Questions</h2>
+                <p class="text-lg text-gray-600">Find answers to common questions about our programs</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <button class="faq-toggle flex justify-between items-center w-full">
+                            <h3 class="text-lg font-medium text-left text-gray-900">Do I need prior coding experience?</h3>
+                            <i class="fas fa-chevron-down text-primary ml-2 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content mt-4 hidden">
+                            <p class="text-gray-600">Most of our beginner courses require no prior coding experience. We'll start with the fundamentals and build up from there. For our intermediate and advanced courses, we do recommend having some background in programming concepts.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <button class="faq-toggle flex justify-between items-center w-full">
+                            <h3 class="text-lg font-medium text-left text-gray-900">What's the time commitment for courses?</h3>
+                            <i class="fas fa-chevron-down text-primary ml-2 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content mt-4 hidden">
+                            <p class="text-gray-600">Our full-time immersive programs require about 6 hours per week (Monday-Wednesday-Friday, 2hours each). Online programs typically involve 4 hours per week, with evening and weekend options available. Each course page lists the expected time commitment.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <button class="faq-toggle flex justify-between items-center w-full">
+                            <h3 class="text-lg font-medium text-left text-gray-900">What career support do you offer?</h3>
+                            <i class="fas fa-chevron-down text-primary ml-2 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content mt-4 hidden">
+                            <p class="text-gray-600">We provide extensive career services including resume reviews, LinkedIn profile optimization, technical interview preparation, portfolio building, and networking opportunities with our hiring partners. Many of our students receive job offers before completing the program.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 4 -->
+                    <!-- <div class="bg-white p-6 rounded-lg shadow-md">
+                        <button class="faq-toggle flex justify-between items-center w-full">
+                            <h3 class="text-lg font-medium text-left text-gray-900">Do you offer financial aid or scholarships?</h3>
+                            <i class="fas fa-chevron-down text-primary ml-2 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content mt-4 hidden">
+                            <p class="text-gray-600">Yes! We offer a variety of financing options including installment plans, income share agreements, and need-based scholarships. Additionally, we partner with several organizations that provide grants for underrepresented groups in tech. Contact our admissions team to learn about your options.</p>
+                        </div>
+                    </div> -->
+                    
+                    <!-- FAQ Item 5 -->
+                    <!-- <div class="bg-white p-6 rounded-lg shadow-md">
+                        <button class="faq-toggle flex justify-between items-center w-full">
+                            <h3 class="text-lg font-medium text-left text-gray-900">Can I get university credit for these courses?</h3>
+                            <i class="fas fa-chevron-down text-primary ml-2 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content mt-4 hidden">
+                            <p class="text-gray-600">We've partnered with several universities that will grant credit for completing our advanced programs. Currently, our Data Science and Software Engineering certificates can be applied for credit at 3 regional universities. Check with your academic advisor for transfer policies.</p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="enroll" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-center text-white">
+                <h2 class="text-3xl font-bold mb-4">Start Your Application Today</h2>
+                <p class="text-xl mb-8 max-w-3xl mx-auto">Our admissions team will review your application and schedule an interview to discuss your goals and which program is right for you.</p>
+                <a href="#contact" class="bg-white hover:bg-gray-100 text-darkblue font-bold py-3 px-8 rounded-lg inline-block transition duration-300 shadow-lg">
+                    Begin Application
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darkblue text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Column 1 -->
+                <div class="md:col-span-1">
+                    <div class="downlogo flex items-center">
+                        <!-- <i class="fas fa-laptop-code text-secondary text-3xl mr-2"></i> -->
+                        <img class="" src="images/bidel.jpg" alt="">
+                        <span class="text-xl font-bold">BidelTech</span>
+                    </div>
+                    <p class="mt-4 text-gray-300">Empowering the next generation of software developers through practical, career-focused education.</p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Column 2 -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Programs</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">Web Development</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">Data Science</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">Mobile Development</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">Digital Marketing</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">Cybersecurity</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3 -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">Events</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">Careers</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">Alumni Network</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">Hiring Partners</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4 -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">Student Handbook</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">Accessibility</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-300 mb-4 md:mb-0">&copy; 2025 BidelTech Institute. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-300 hover:text-white">Sitemap</a>
+                    <a href="#" class="text-gray-300 hover:text-white">Careers</a>
+                    <a href="#" class="text-gray-300 hover:text-white">Press</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle mobile menu
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                // Toggle content visibility
+                content.classList.toggle('hidden');
+                
+                // Rotate icon
+                icon.classList.toggle('transform');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+    <!-- Read the Formbutton docs at formspree.io/formbutton/docs. See more examples at codepen.io/formspree -->
+<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+<script>
+  /* paste this line in verbatim */
+  window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+  /* customize formbutton below*/     
+  formbutton("create", {
+    action: "https://formspree.io/f/xpwrdavr",
+    title: "How can we help?",
+    fields: [
+      { 
+        type: "text", 
+        label: "Name:", 
+        name: "name",
+        required: true,
+        placeholder: ""
+      },
+      { 
+        type: "email", 
+        label: "Email:", 
+        name: "email",
+        required: true,
+        placeholder: ""
+      },
+      { 
+        type: "number", 
+        label: "phone:", 
+        name: "phone",
+        required: true,
+        placeholder: ""
+      },
+      { 
+        type: "text", 
+        label: "course:", 
+        name: "course",
+        required: false,
+        placeholder: ""
+      },
+      {
+        type: "textarea",
+        label: "Message:",
+        name: "message",
+        placeholder: "",
+      },
+      { type: "submit" }      
+    ],
+    styles: {
+      title: {
+        backgroundColor: "gray"
+      },
+      button: {
+        backgroundColor: "gray"
+      }
+    }
+  });
+</script>
+</body>
+</html>
